@@ -26,12 +26,12 @@
                                 <ColumnDefinition Width="*"></ColumnDefinition>
                             </Grid.ColumnDefinitions>
                             <StackPanel Grid.Column="0" VerticalAlignment="Center">
-                                <TextBlock>
+                                <TextBlock TextTrimming="CharacterEllipsis">
                                     <Run Text="{Binding PartnerTypes.Name}"></Run>
                                     <Run Text=" | "></Run>
                                     <Run Text="{Binding Name}"></Run>
                                 </TextBlock>
-                                <TextBlock>
+                                <TextBlock TextTrimming="CharacterEllipsis">
                                     <Run Text="{Binding Directors.SecondName}"></Run>
                                     <Run Text="{Binding Directors.FirstName}"></Run>
                                     <Run Text="{Binding Directors.PatronomycName}"></Run>

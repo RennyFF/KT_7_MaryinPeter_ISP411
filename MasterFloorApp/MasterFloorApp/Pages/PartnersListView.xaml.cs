@@ -34,17 +34,17 @@ namespace MasterFloorApp.Pages
 
         private void EditButton_Click(object sender, RoutedEventArgs e)
         {
-
+            Utils.Navigation.CurrentFrame.Navigate(new Pages.EditPage((sender as Button).DataContext as Model.Partners));
         }
 
         private void HistoryButton_Click(object sender, RoutedEventArgs e)
         {
-
+            Utils.Navigation.CurrentFrame.Navigate(new Pages.HistoryList((sender as Button).DataContext as Model.Partners));
         }
 
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
-
+            Utils.Navigation.CurrentFrame.Navigate(new Pages.EditPage(null));
         }
     }
 }

@@ -23,13 +23,12 @@ namespace MasterFloorApp.Model
 
         public static MasterFloorDBEntities GetContext()
         {
-            if(_Context == null)
+            if (_Context == null)
             {
                 _Context = new MasterFloorDBEntities();
             }
             return _Context;
         }
-
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();

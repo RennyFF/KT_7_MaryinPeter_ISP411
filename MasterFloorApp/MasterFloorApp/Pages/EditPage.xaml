@@ -11,15 +11,17 @@
 
     <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition Height="60"></RowDefinition>
             <RowDefinition></RowDefinition>
             <RowDefinition Height="50"></RowDefinition>
         </Grid.RowDefinitions>
-        <Grid HorizontalAlignment="Center">
+        <TextBlock x:Name="HeaderText" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Bottom"></TextBlock>
+        <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1">
             <Grid.RowDefinitions>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
+                <RowDefinition Height="70"></RowDefinition>
+                <RowDefinition Height="70"></RowDefinition>
+                <RowDefinition Height="70"></RowDefinition>
+                <RowDefinition Height="70"></RowDefinition>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="150"></ColumnDefinition>
@@ -36,16 +38,15 @@
             <TextBlock Text="Номер телефона:" Grid.Row="1" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 0 10 0"></TextBlock>
             <TextBlock Text="Email:" Grid.Row="2" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 0 10 0"></TextBlock>
 
-            <TextBox Grid.Row="0" Grid.Column="1" x:Name="NameTB" VerticalAlignment="Center"></TextBox>
+            <TextBox Grid.Row="0" Grid.Column="1" x:Name="NameTB" VerticalAlignment="Center" MaxLength="50"></TextBox>
             <ComboBox DisplayMemberPath="Name" Grid.Row="1" Grid.Column="1" x:Name="TypeCB" VerticalAlignment="Center"></ComboBox>
             <TextBox Grid.Row="2" Grid.Column="1" x:Name="RatingTB" VerticalAlignment="Center"></TextBox>
             <TextBox Grid.Row="3" Grid.Column="1" x:Name="AdressTB" VerticalAlignment="Center"></TextBox>
-
-            <TextBox Grid.Row="0" Grid.Column="3" x:Name="FIOTB" VerticalAlignment="Center"></TextBox>
-            <TextBox Grid.Row="1" Grid.Column="3" x:Name="PhoneTB" VerticalAlignment="Center"></TextBox>
-            <TextBox Grid.Row="2" Grid.Column="3" x:Name="EmailTB" VerticalAlignment="Center"></TextBox>
+            <TextBox Grid.Row="0" Grid.Column="3" x:Name="FIOTB" VerticalAlignment="Center" MaxLength="153"></TextBox>
+            <TextBox Grid.Row="1" Grid.Column="3" x:Name="PhoneTB" VerticalAlignment="Center"  MaxLength="20"></TextBox>
+            <TextBox Grid.Row="2" Grid.Column="3" x:Name="EmailTB" VerticalAlignment="Center"  MaxLength="100"></TextBox>
         </Grid>        
-        <Button x:Name="BackButton" Click="BackButton_Click" Content="Назад" Grid.Row="1" HorizontalAlignment="Left" Margin="10 0 0 0"></Button>
-        <Button x:Name="SaveButton" Click="SaveButton_Click" Content="Сохранить" Grid.Row="1" HorizontalAlignment="Right" Margin="0 0 10 0"></Button>
+        <Button x:Name="BackButton" Click="BackButton_Click" Content="Назад" Grid.Row="2" HorizontalAlignment="Left" Margin="10 0 0 0"></Button>
+        <Button x:Name="SaveButton" Click="SaveButton_Click" Content="Сохранить" Grid.Row="2" HorizontalAlignment="Right" Margin="0 0 10 0"></Button>
     </Grid>
 </Page>

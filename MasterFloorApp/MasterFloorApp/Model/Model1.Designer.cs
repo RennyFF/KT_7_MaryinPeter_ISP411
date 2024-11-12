@@ -1,4 +1,4 @@
-﻿// Создание кода T4 для модели "C:\Users\comcuru\Desktop\sd\MasterFloorApp\MasterFloorApp\Model\Model1.edmx" включено. 
+﻿// Создание кода T4 для модели "C:\Users\comcuru\Desktop\asd\KT_7_MaryinPeter_ISP411\MasterFloorApp\MasterFloorApp\Model\Model1.edmx" включено. 
 // Чтобы включить формирование кода прежних версий, измените значение свойства "Стратегия создания кода" конструктора
 // на "Legacy ObjectContext". Это свойство доступно в окне "Свойства", если модель
 // открыта в конструкторе.

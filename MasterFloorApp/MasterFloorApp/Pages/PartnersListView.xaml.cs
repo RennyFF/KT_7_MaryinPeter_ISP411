@@ -28,8 +28,13 @@ namespace MasterFloorApp.Pages
 
         private void Init()
         {
-            var partners = Model.MasterFloorDBEntities.GetContext().Partners.ToList();
-            PartnersList.ItemsSource = partners;
+            var context = Model.MasterFloorDBEntities.GetContext().Partners.ToList();
+            List<Utils.PartnersWithDiscount> Partners = new List<Utils.PartnersWithDiscount>();
+            foreach (var item in context)
+            {
+                Partners.Add(new Utils.PartnersWithDiscount(item));
+            }
+            PartnersList.ItemsSource = Partners;
         }
 
         private void EditButton_Click(object sender, RoutedEventArgs e)

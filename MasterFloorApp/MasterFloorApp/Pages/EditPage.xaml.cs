@@ -34,7 +34,8 @@ namespace MasterFloorApp.Pages
             {
                 if (Partner != null)
                 {
-                    CurrentPartner = Partner;
+                    CurrentPartner = Model.MasterFloorDBEntities.GetContext().Partners
+                        .Where(i => i.Id == Partner.Id).First();
                     IsAdding = false;
                     HeaderText.Text = "Редактирование пользователя";
                 }
